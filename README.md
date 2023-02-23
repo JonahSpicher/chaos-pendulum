@@ -98,8 +98,3 @@ point once things are set up and running.
   seeing.
   - A cleaned data file for each of the four videos (fast2, fast3, slow1, and slow2).
     - I will probably rename the fast ones this is silly
-
-
-Ok Jonah. things you need to do:
-- Make a github repo, share with eli
-- Get the videos on USB
