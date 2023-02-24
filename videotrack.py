@@ -34,7 +34,7 @@ def set_color(cname, lval, hval):
             contents.append(row)
     for row in contents:
         if row[0] == cname:
-            print("yes")
+            print("Color name found.")
             row[1] = lval
             row[2] = hval
             break
@@ -215,7 +215,7 @@ class Controller:
                 velocity = self.check_distance(center, color)
                 return((center[0], center[1])) #Tuple where line info is stored)
             else:
-                print("Radius too small ", color)
+                #print("Radius too small ", color)
                 return False
         else:
             print("Point not detected ", color)
@@ -300,9 +300,9 @@ def main_loop(calibrate=False, fname='data.npy', scale=True):
     view = View(model)
     controller = Controller(model)
     if calibrate:
-        cap = cv2.VideoCapture('fast1.5-c.mp4')
+        cap = cv2.VideoCapture('../videos/fast1.5-c.mp4')
     else:
-        cap = cv2.VideoCapture('slow2\ \(copy\).cine')
+        cap = cv2.VideoCapture('../videos/slow2\ \(copy\).cine')
 
     model.calibration_start = time.time()
     #while cv2.getWindowProperty(cap, 0) >=0:

@@ -71,6 +71,15 @@ their own center of rotation as the origin. This means that for all of the point
 the radius should be basically constant. This is a useful way to find false
 detections.
 
+### Calibration
+In order to reset the values of a given color, each color tracking script is
+equipped with a "calibration mode," where it accepts an (x,y) coordinate and color
+name from the terminal, which it uses to extract color information from that location
+in the video. A good method is to mouseover the point in on the video playback
+where the color you want to detect is, then read off the coordinates in the lower
+left hand corner. The input format is color name,x,y. To see a list of all color
+names, look at colors.csv, which is the file updated by the calibration script.
+
 ### Important Terms
 (like, that I made up and don't just mean something google-able)
 - Inner Points - One of the three points connected to the central purple hub at
@@ -85,8 +94,6 @@ These are harder to detect, as they still look like data, but after converting t
 polar coordinates the radius should be very different from most points.
 
 ## To Do:
-- Fix bugs with calibration mode for videotrack.py (top priority, can't get data
-without this)
 - Re-write fix glitches, it is currently nonsense. This might be a good starting
 point once things are set up and running.
 - Get reasonable data. This means:
